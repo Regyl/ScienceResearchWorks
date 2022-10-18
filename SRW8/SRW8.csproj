@@ -4,10 +4,10 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{06800D8F-8A41-4A59-8919-AF0D05CCDC32}</ProjectGuid>
+        <ProjectGuid>{F0131A62-1D54-4A89-9112-464A79C8A87C}</ProjectGuid>
         <OutputType>WinExe</OutputType>
-        <RootNamespace>SRW7</RootNamespace>
-        <AssemblyName>SRW7</AssemblyName>
+        <RootNamespace>WindowsFormsApp8</RootNamespace>
+        <AssemblyName>SRW8</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,9 +55,7 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <EmbeddedResource Include="Form1.resx">
-          <DependentUpon>Form1.cs</DependentUpon>
-        </EmbeddedResource>
+        <EmbeddedResource Include="Form1.resx" />
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
