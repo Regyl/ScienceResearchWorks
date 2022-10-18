@@ -25,15 +25,17 @@ namespace SRW7
         {
             int n = 2;
             double crunch = 1;
-            double precision, s = 0, item; //присвоение счётчику шагов, сумме и //слагаемому начальных значений
+            double precision, s = 0, item;
+            
             precision = Convert.ToDouble(textBox1.Text);
 
             do
             {
                 n++;
                 item = crunch / ((n - 1) * (n + 1));
-                s = s + item;
+                s += item;
             } while (item > precision);
+            
             label3.Text = Convert.ToString(s);
             label5.Text = Convert.ToString(n);
         }
