@@ -12,7 +12,7 @@ namespace SRW12
 {
     public partial class Form1 : Form
     {
-        private string DiagonalText = "Сумма элементов побочной диагонали = ";
+        private string DiagonalText = "Максимальный элемент побочной диагонали = ";
         private static Random rnd = new Random();
         
         public Form1()
@@ -57,13 +57,17 @@ namespace SRW12
 
         private void label1_Click(object sender, EventArgs e)
         {
-            int s = 0;
+            int max = Int32.MinValue;
             int n = Convert.ToInt32(comboBox2.Text);
             for (int i=1; i<=n; i++)
             {               
-                s = s + Convert.ToInt32(dataGridView1.Rows[i].Cells[n-i+1].Value);                     
+                int current = Convert.ToInt32(dataGridView1.Rows[i].Cells[n-i+1].Value);
+                if (current > max)
+                {
+                    max = current;
+                }
             }
-            label1.Text = DiagonalText + Convert.ToString(s);
+            label1.Text = DiagonalText + Convert.ToString(max);
         }
 
         private void Form1_Load(object sender, EventArgs e)
