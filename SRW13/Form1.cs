@@ -13,50 +13,48 @@ namespace SRW13
 {
     public partial class Form1 : Form
     {
-        int n; //объявление глобальных переменных
-        string[] a = new string[100]; //объявление глоб. массивов
-
+        int n;  
+        string[] a = new string[100];
         public Form1()
         {
             InitializeComponent();
+            listBox1.Text = "";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            int m = 0;
+            bool flag = true;
+            for (int i = 1; i <= n; i++)
+            {
+                if (flag && a[i].Length > 7)
+                {
+                    a[i] = a[1];
+                    flag = false;
+                }
+                listBox2.Items.Add(a[i]);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int i;
-            n = Convert.ToInt32(comboBox1.Text);//ввод длины списка городов
-            listBox1.Text = ""; //очистка списка
-            label2.Text = " Количество городов, названия которых заканчиваются на букву А = ";//очистка метки
+            n = Convert.ToInt32(comboBox1.Text);
+            
             for (i = 1; i <= n; i++)
             {
                 a[i] = Interaction.InputBox("Введите название города", "Название :", "Москва");
-                listBox1.Items.Add(a[i]); //добавление в listbox1
+                listBox1.Items.Add(a[i]);
             }
         }
 
-        private void Form13_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             int i;
             for (i = 1; i <= 7; i++)
-            { //задание списков ComboBox1
+            {                 
                 comboBox1.Items.Add(Convert.ToString(i + 1));
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            int i, m;
-            m = 0;
-            for (i = 1; i <= n; i++)
-            {
-                if (a[i].EndsWith("а"))
-                { //если найдена буква «а» в последней позиции слова
-                    MessageBox.Show(a[i], "Результат:", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                    m = m + 1;
-                }
-            }
-            label2.Text = label2.Text + Convert.ToString(m);//обновл. метки – вывод результата
-
         }
     }
 }
