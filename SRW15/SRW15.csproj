@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{41B8DD15-AC62-45BB-AAE8-01D8DE0B5B22}</ProjectGuid>
+        <ProjectGuid>{FA596168-6AB9-428B-8ECB-14928054475F}</ProjectGuid>
         <OutputType>WinExe</OutputType>
-        <RootNamespace>SRW14</RootNamespace>
-        <AssemblyName>SRW14</AssemblyName>
+        <RootNamespace>SRW15</RootNamespace>
+        <AssemblyName>SRW15</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,18 +33,17 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Microsoft.VisualBasic" />
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="System.Xml.Linq" />
-        <Reference Include="System.Data.DataSetExtensions" />
-        <Reference Include="Microsoft.CSharp" />
-        <Reference Include="System.Data" />
-        <Reference Include="System.Deployment" />
-        <Reference Include="System.Drawing" />
-        <Reference Include="System.Net.Http" />
-        <Reference Include="System.Windows.Forms" />
-        <Reference Include="System.Xml" />
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Xml.Linq"/>
+        <Reference Include="System.Data.DataSetExtensions"/>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Deployment"/>
+        <Reference Include="System.Drawing"/>
+        <Reference Include="System.Net.Http"/>
+        <Reference Include="System.Windows.Forms"/>
+        <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Form1.cs">
@@ -53,11 +52,8 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
-        <Compile Include="Program.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
-        <EmbeddedResource Include="Form1.resx">
-          <DependentUpon>Form1.cs</DependentUpon>
-        </EmbeddedResource>
+        <Compile Include="Program.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -67,7 +63,6 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <None Include="packages.config" />
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
             <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,7 +74,7 @@
         </Compile>
     </ItemGroup>
     <ItemGroup>
-        <None Include="App.config" />
+        <None Include="App.config"/>
     </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

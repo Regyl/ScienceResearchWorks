@@ -23,15 +23,19 @@ namespace SRW13
 
         private void label2_Click(object sender, EventArgs e)
         {
-            int m = 0;
-            bool flag = true;
             for (int i = 1; i <= n; i++)
             {
-                if (flag && a[i].Length > 7)
+                if (a[i].Length > 7)
                 {
+                    string temp = a[i];
                     a[i] = a[1];
-                    flag = false;
+                    a[1] = temp;
+                    break;
                 }
+            }
+
+            for (int i = 1; i <= n; i++)
+            {
                 listBox2.Items.Add(a[i]);
             }
         }

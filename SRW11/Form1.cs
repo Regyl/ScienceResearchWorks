@@ -18,7 +18,6 @@ namespace SRW11
             int m, n, minZn, maxZn;
             int[,] a = new int[100, 100];
             
-            //
             for (int i= 1;i<=7; i++)   
             {                 
                 comboBox1.Items.Add(Convert.ToString(i + 1));
