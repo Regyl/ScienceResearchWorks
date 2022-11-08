@@ -16,40 +16,50 @@ namespace SRW10
         public Form1()
         {
             InitializeComponent();
-            listBox1.Text = "";
             label3.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             int n = Convert.ToInt32(comboBox1.Text);
-            int[] a = InitializeInitialArray(n);
-            PrintResultArray(a, n);
+            int[] array = InitializeInitialArray(n);
+            
+            int m = Convert.ToInt32(comboBox2.Text);
+            double a = Convert.ToInt32(comboBox3.Text);
+            double b = Convert.ToInt32(comboBox4.Text);
+
+            double step = (b - a) / m;
+
+            int[] counterArray = CountPeriodItems(m, array, Convert.ToInt32(a), Convert.ToInt32(b), step, n);
+            ShowResultArray(counterArray);
         }
 
-        private void PrintResultArray(int[] a, int n)
+        private int[] CountPeriodItems(int m, int[] initialArray, int a, int b, double step, int n)
         {
-            for (int i = 1; i <= n - 1; i++) 
-            {                 
-                int min= a[i];
-                for (int j = i + 1; j <= n; j++ )     
-                {
-                    if (a[i] > a[j])
-                    {
-                        min = a[j]; 
-                        a[j] = a[i]; 
-                        a[i] = min;
-                    }                                                  
-                }
-                
-            }
-            
+            int[] counterArray = new int[m];
+
             for (int i = 1; i <= n; i++)
             {
-                listBox1.Items.Add(Convert.ToString(i) + ")    " + Convert.ToString(a[i]));
+                if (initialArray[i] >= a && initialArray[i] <= b)
+                {
+                    int index = Convert.ToInt32(Math.Floor((initialArray[i] - a) / step));
+                    counterArray[index] = counterArray[index] + 1;
+                }
             }
+
+            return counterArray; 
         }
 
+        private void ShowResultArray(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                String item = Convert.ToString(i) + ") " + Convert.ToString(array[i]);
+                listBox1.Items.Add(item);
+            }
+        }
+        
         private int[] InitializeInitialArray(int n)
         {
             int[] a = new int[1000];
