@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRW14", "SRW14\SRW14.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRW15", "SRW15\SRW15.csproj", "{FA596168-6AB9-428B-8ECB-14928054475F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary15", "ClassLibrary15\ClassLibrary15.csproj", "{50E786F1-821C-4B52-8DB7-FACA62D4545B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{FA596168-6AB9-428B-8ECB-14928054475F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA596168-6AB9-428B-8ECB-14928054475F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA596168-6AB9-428B-8ECB-14928054475F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E786F1-821C-4B52-8DB7-FACA62D4545B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E786F1-821C-4B52-8DB7-FACA62D4545B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E786F1-821C-4B52-8DB7-FACA62D4545B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E786F1-821C-4B52-8DB7-FACA62D4545B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
